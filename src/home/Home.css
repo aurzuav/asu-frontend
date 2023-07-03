@@ -1,0 +1,92 @@
+table {
+    border-collapse: collapse;
+    width: 20%;
+    background-color: #000000;
+}
+
+.contenido{
+    margin: 0 auto;
+    padding: 10px 30px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+p {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+
+th, td {
+    border: 1px solid #44e33e;
+    padding: 8px;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #0f0
+}
+
+caption {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.resumen{
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    background-color: #6b6c6f;
+    padding: 10px; 
+    width: 50%;
+    text-align: justify;
+
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 80px;
+    padding: 10px;
+    margin: 0;
+}
+
+#ranking-title{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    padding: 0;
+    margin: 5px;
+
+}
+
+#logo{
+    height: 200px;
+    width: 250px;
+    padding-left: 20px;
+}
+
+.puntajes{
+    background-color: #631dcc;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.botones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botones > * {
+    margin: 10px; 
+  }
+
+.admin-button{
+    background-color: red;
+}

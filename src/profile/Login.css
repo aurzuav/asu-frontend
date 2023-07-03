@@ -1,0 +1,76 @@
+:root{
+    font-family: 'Oswald', sans-serif;
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h1{
+margin: 10px;
+}
+
+.container h2{
+    margin: 0;
+    margin-bottom: 40px;
+}
+.Login {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+    background-color: #8c05da;}
+.Login form label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px; }
+
+.Login form input[type="email"],
+.Login form input[type="password"],
+.Login form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+    
+.Login form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+    
+.Login form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+button {
+    width: 500px;
+    background-color: #22cd2a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+margin-left: 40px;
+margin-bottom: 100px;}
+  
+button:hover {
+    background-color: #22cd2a;}
+
+.error{
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+}

@@ -1,0 +1,32 @@
+.mesa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 1000px;
+  background-color: #835505;
+}
+
+.mazo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.mazo > * {
+  margin-right: 10px; /* Espacio entre "Mazo" y "Card" */
+}
+
+.mano {
+  display: flex;
+  justify-content: center;
+}
+
+  
+
+
+
+
+
+

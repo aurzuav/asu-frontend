@@ -1,0 +1,28 @@
+nav {
+    background-color: #2d2d2d;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+}
+
+nav a {
+    padding: 15px;
+    color: white;
+    display: inline;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #3d3d3d;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+.logout-button {
+    color: red;
+  } 
