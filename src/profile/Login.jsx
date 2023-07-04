@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
 import { AuthContext } from '../auth/AuthContext'
+import API_URL from '../config';
 
 
 function Login() {
@@ -15,7 +16,7 @@ function Login() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    axios.post(`${import.meta.env.VITE_BACKEND_URL}/Login`,
+    axios.post(`${API_URL}/Login`,
       {
         email,
         password

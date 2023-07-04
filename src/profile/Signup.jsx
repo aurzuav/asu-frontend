@@ -3,6 +3,7 @@ import './Login.css'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import API_URL from '../config';
 
 
 function Signup() {
@@ -15,7 +16,7 @@ function Signup() {
 
     async function handleSubmit(event) {
         event.preventDefault();
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/Signup`,
+        axios.post(`${API_URL}/Signup`,
             {
                 email,
                 username,

@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useLocation } from "react-router-dom";
 import jwt_decode from 'jwt-decode';
 import { AuthContext } from '../auth/AuthContext';
+import API_URL from '../config';
 
 
 function Sala() {
@@ -26,7 +27,7 @@ function Sala() {
       try {
         const configPlayerCreate = {
           'method': 'post',
-          'url': `${import.meta.env.VITE_BACKEND_URL}/players/create`,
+          'url': `${API_URL}/players/create`,
           'headers': {
             'Authorization': `Bearer ${token}`
           },
@@ -42,7 +43,7 @@ function Sala() {
   
         const configTablesCreate = {
           'method': 'post',
-          'url': `${import.meta.env.VITE_BACKEND_URL}/tables/create`,
+          'url': `${API_URL}/tables/create`,
           'headers': {
             'Authorization': `Bearer ${token}`
           },
@@ -58,7 +59,7 @@ function Sala() {
   
         const configMazosCreate = {
           'method': 'post',
-          'url': `${import.meta.env.VITE_BACKEND_URL}/mazos/create`,
+          'url': `${API_URL}/mazos/create`,
           'headers': {
             'Authorization': `Bearer ${token}`
           },
@@ -75,7 +76,7 @@ function Sala() {
         console.log(mazosResponse.id);
         const configMazoRepartir = {
           'method': 'patch',
-          'url': `${import.meta.env.VITE_BACKEND_URL}/mazos/repartir`,
+          'url': `${API_URL}/mazos/repartir`,
           'headers': {
             'Authorization': `Bearer ${token}`
           },
@@ -89,7 +90,7 @@ function Sala() {
   
         const ConfigCartas = {
           'method': 'get',
-          'url': `${import.meta.env.VITE_BACKEND_URL}/mazos/${mazosResponse.id}/cartas`,
+          'url': `${API_URL}/mazos/${mazosResponse.id}/cartas`,
           'headers': {
             'Authorization': `Bearer ${token}`
           }
@@ -101,7 +102,7 @@ function Sala() {
 
         const ConfigMazoPrincipal = {
           'method': 'get',
-          'url': `${import.meta.env.VITE_BACKEND_URL}/mazos/${1}/cartas`,
+          'url': `${API_URL}/mazos/${1}/cartas`,
           'headers': {
             'Authorization': `Bearer ${token}`
           }
@@ -113,7 +114,7 @@ function Sala() {
 
         const ConfigBasuraResponse = {
           'method': 'get',
-          'url': `${import.meta.env.VITE_BACKEND_URL}/mazos/${2}/cartas`,
+          'url': `${API_URL}/mazos/${2}/cartas`,
           'headers': {
             'Authorization': `Bearer ${token}`
           }

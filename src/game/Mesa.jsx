@@ -4,6 +4,7 @@ import Card from './Card'
 import MazoPrincipal from './MazoPrincipal'
 import axios from 'axios';
 import { AuthContext } from '../auth/AuthContext';
+import API_URL from '../config';
 
 function Mesa(props) {
   const { cartas, mazoPrincipal, basura } = props
@@ -21,7 +22,7 @@ function Mesa(props) {
     try {
       const ConfigBotar = {
         'method': 'patch',
-        'url': `${import.meta.env.VITE_BACKEND_URL}/mazos/botar`,
+        'url': `${API_URL}/mazos/botar`,
         'headers': {
           'Authorization': `Bearer ${token}`
         },
@@ -46,7 +47,7 @@ function Mesa(props) {
     try {
       const ConfigRobar = {
         'method': 'patch',
-        'url': `${import.meta.env.VITE_BACKEND_URL}/mazos/robar`,
+        'url': `${API_URL}/mazos/robar`,
         'headers': {
           'Authorization': `Bearer ${token}`
         },
@@ -61,7 +62,7 @@ function Mesa(props) {
       setbotar(true)
       const ConfigCartas = {
         'method': 'get',
-        'url': `${import.meta.env.VITE_BACKEND_URL}/mazos/${mano[0].mazo_id}/cartas`,
+        'url': `${API_URL}/mazos/${mano[0].mazo_id}/cartas`,
         'headers': {
           'Authorization': `Bearer ${token}`
         }

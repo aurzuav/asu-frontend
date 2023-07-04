@@ -7,6 +7,7 @@ import Nav from '../common/Nav'
 import "./Home.css"
 import{Link} from 'react-router-dom'
 import jwt_decode from 'jwt-decode';
+import API_URL from '../config';
 
 const checkUserIsAdmin = (token) => {
   const decodedToken = jwt_decode(token);
@@ -18,7 +19,7 @@ function Home() {
   const [users, setUsers] = useState([]);
   const config = {
     'method' : 'get',
-    'url' : `${import.meta.env.VITE_BACKEND_URL}/users/list`,
+    'url' : `${API_URL}/users/list`,
     'headers':{
       'Authorization':`Bearer ${token}`
     }

@@ -7,6 +7,7 @@ import Nav from '../common/Nav'
 import { Link } from 'react-router-dom'
 import './ElegirPartida.css'
 import { useNavigate } from "react-router-dom";
+import API_URL from '../config';
 
 
 function ElegirPartida() {
@@ -15,7 +16,7 @@ function ElegirPartida() {
     const [games, setGames] = useState([]);
     const config = {
         'method': 'get',
-        'url': `${import.meta.env.VITE_BACKEND_URL}/games/list`,
+        'url': `${API_URL}/games/list`,
         'headers': {
             'Authorization': `Bearer ${token}`
         }

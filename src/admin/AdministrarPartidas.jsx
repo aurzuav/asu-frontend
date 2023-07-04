@@ -6,6 +6,7 @@ import { AuthContext } from '../auth/AuthContext';
 import Nav from '../common/Nav'
 import { Link } from 'react-router-dom'
 import './AdministrarPartidas.css'
+import API_URL from '../config';
 
 
 function AdministrarPartidas() {
@@ -15,14 +16,14 @@ function AdministrarPartidas() {
 
     const configAuth = {
         'method': 'get',
-        'url': `${import.meta.env.VITE_BACKEND_URL}/scope-example/protectedadmin`,
+        'url': `${API_URL}/scope-example/protectedadmin`,
         'headers': {
             'Authorization': `Bearer ${token}`
         }
     }
     const configGames = {
         'method': 'get',
-        'url': `${import.meta.env.VITE_BACKEND_URL}/games/list`,
+        'url': `${API_URL}/games/list`,
         'headers': {
             'Authorization': `Bearer ${token}`
         }
@@ -47,7 +48,7 @@ function AdministrarPartidas() {
     const handleDeleteGame = (gameId) => {
         const configGamesDelete = {
             'method': 'delete',
-            'url': `${import.meta.env.VITE_BACKEND_URL}/games/delete/${gameId}`,
+            'url': `${API_URL}/games/delete/${gameId}`,
             'headers': {
                 'Authorization': `Bearer ${token}`
             }
@@ -64,7 +65,7 @@ function AdministrarPartidas() {
         e.preventDefault();
         const configGamesCreate = {
             'method': 'post',
-            'url': `${import.meta.env.VITE_BACKEND_URL}/games/create`,
+            'url': `${API_URL}/games/create`,
             'headers': {
                 'Authorization': `Bearer ${token}`
             },
